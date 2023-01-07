@@ -2,7 +2,7 @@ import librtd
 import datetime
 import logging
 from CSVLogging import CSVTimedRotatingFileHandlerWithHeader, CSVFormatter
-from sensors import SMS8ChannelRTDBoard, WaveshareAnalogDigitalConverter
+from sensors import SMS8ChannelRTDBoard, WaveshareAnalogDigitalConverter  
 
 # Define constants
 NUMBER_OF_RTD_SENSORS = 8
