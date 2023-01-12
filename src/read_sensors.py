@@ -2,11 +2,12 @@ import librtd
 import datetime
 import logging
 from CSVLogging import CSVTimedRotatingFileHandlerWithHeader, CSVFormatter
-from sensors import SMS8ChannelRTDBoard, WaveshareAnalogDigitalConverter  
+from sensors import SMS8ChannelRTDBoard
+from sensors import WaveshareAnalogDigitalConverter  
 
 # Define constants
 NUMBER_OF_RTD_SENSORS = 8
-PATH_TO_LOG_FILE = "/media/crcdj/Elements/RTD board Sequent Microsystems/logs/rtd_readings.csv"
+PATH_TO_LOG_FILE = "/media/crcdj/Elements1/RTD board Sequent Microsystems/logs/rtd_readings.csv"
 LOG_HEADER = ("Timestamp", "RTD 01", "RTD 02", "RTD 03", "RTD 04", "RTD 05", "RTD 06", "RTD 07", "RTD 08")
 
 def main() -> None:
@@ -15,7 +16,7 @@ def main() -> None:
    timestamp = [datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")]
    rtd_readings = [*timestamp, *rtd_readings]
 
-   waveshare_adc_dac = WaveshareAnalogDigitalConverter()
+   # waveshare_adc_dac = WaveshareAnalogDigitalConverter()
 
    # Create logger
    logger = logging.getLogger("SensorLogger")
